@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <style>
+        body{
+            background-image: url(background.jpg);
+            background-repeat:no-repeat ;
+            background-size: 100% ;
+            
+           
+        }
+    </style>
+
+    <script>
+      
+
+      function validateFormfn(){
+        var pw=document.getElementById('password').value;
+        if(pw =="" && pw.length<=6){
+          alert("Password should greater than 6 characters");
+          return false;
+        }
+
+        if(pw.tolower == "password"){
+          alert("Password can not be password");
+          return false;
+        }
+      }
+
+    </script>
+
+
+    <title>Home</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark ">
+
+        <a class="navbar-brand" href=""><p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;color: azure;"> University of Sydney</p> </a>
+        <ul class="navbar-nav " style="margin-left: auto;"  >
+            
+            <li class="navbar-item" > <a href="http://localhost/Assignment/Home.php" class="nav-link  active">LOG OUT <img src="log.webp" alt="loging"  style="opacity: 0.5; width: 25px; height: 25px;"></a></li>
+        </ul>
+
+    </nav>
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="col-md-8">
+                <h3 style="color: aliceblue;">Admin Dashboard</h3>
+                
+            </div>
+
+            <div class="col-md-4 pt-3">
+               
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-md-2" style="background-color: black; opacity: 0.4; height: 100%; border-radius: 5px;">
+            <div class="d-flex align-items-start">
+                <div class="nav flex-column nav-pills me-6" id="v-pills-tab" role="tablist" aria-orientation="vertical" style="size: 40px;">
+                  <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Add Admin User  </button>
+                  <button class="nav-link " id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Add New Student </button>
+                  <button class="nav-link " id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Add Course</button>
+                  <button class="nav-link " id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Add Subject</button>
+                  <button class="nav-link " id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Add Marks</button>
+                  <button class="nav-link " id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Get Report</button>
+                </div>
+
+               
+
+
+
+        </div>
+        <hr>
+        <img src="Aus.jpg" alt="" width="200px" height="200px" class="rounded-circle">
+        
+
+    </div>
+    <!--Form -->
+    <div class="col-md-9" >
+        <form action="" onsubmit= "return validateFormfn()"  method="POST"  style="border: 3px ; background-color: black; border-radius: 5px;opacity: 0.5;padding: 5px;" autocomplete="on">
+        <div class="row">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label" style="color: aliceblue;">First Name</label>
+                <input type="text" class="form-control" id="fn" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="inputEmail4" class="form-label" style="color: aliceblue;">Last Name</label>
+                <input type="text" class="form-control" id="ln" required>
+              </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label" style="color: aliceblue;">Email Adress</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+            
+              <div class="col-md-4">
+                <label for="userType" class="form-label" style="color: aliceblue;">User Type</label>
+                <select id="userType" name="userType" class="form-control" >
+                    <option value="Admin">Admin</option>
+                    <option value="Student">Student</option>
+                    
+                  </select>
+              </div>
+              <div class="col-md-2">
+                <label for="inputState" class="form-label" style="color: aliceblue;">Gender</label> <br>
+                <input type="radio" id="Male" name="Gender" value="Male" style="color: aliceblue;" required>
+                <label for="Male" style="color: aliceblue;">Male</label>
+                <input type="radio" id="Female" name="Gender" value="Female" style="color: aliceblue;">
+                <label for="Female" style="color: aliceblue;">Female</label><br>
+
+              </div>
+        </div>
+
+              
+        
+              <div class="row">
+                <div class="col-md-5">
+                <label for="dob" class="form-label" style="color: aliceblue;">DOB</label>
+                <input type="date" class="form-control" id="dob" required>
+                </div>
+
+                <div class="col-md-5">
+                    <label for="dor" class="form-label" style="color: aliceblue;">Date of Registration</label>
+                    <input type="date" class="form-control" id="dor" required>
+                    </div>
+
+              </div>
+
+              <div class="col-md-4">
+                <label for="inputState" class="form-label" style="color: aliceblue;">Department</label>
+                <select id="inputState" class="form-select">
+                  <option selected> Science</option>
+                  <option>Engineering</option>
+                  <option>Management</option>
+                  <option>Art and Education</option>
+                </select>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                    <label for="Adress" class="form-label" style="color: aliceblue;">Address</label>
+                    <input type="text" class="form-control" id="Adress" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="tel" class="form-label" style="color: aliceblue;">Tel.</label>
+                        <input type="tel" class="form-control" id="tel"  placeholder="077-1234678" required>
+                       
+                        </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                    <label for="uname" class="form-label" style="color: aliceblue;">User Name</label>
+                    <input type="text" class="form-control" id="uname" required>
+                    </div>
+                
+                    <div class="col-md-6">
+                        <label for="password" class="form-label" style="color: aliceblue;">PassWord </label>
+                        <input type="text" class="form-control" id="password" required>
+                        </div>
+
+              </div>
+              <br>
+
+            <div class="row">
+                <div class="col-md-6"> </div>
+                <div class="col-md-6">
+                    <button type="submit" class="btn btn-primary btn-block"  >SUBMIT</button>
+                  </div>
+
+            </div>
+            
+
+                   
+
+
+            </form>
+            <!--End of From-->
+            <p id="demo1"></p>
+
+       
+
+
+    </div>
+
+  
+  <div class="tab-content" id="v-pills-tabContent">
+    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">...</div>
+    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">hiii</div>
+    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+  </div>
+</div>
+ 
+ 
+        
+
+</body>
+</html>
+
+
